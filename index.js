@@ -1,4 +1,5 @@
-const express = require('express')
+import 'dotenv/config'
+import express from 'express'
 import { InteractionType, InteractionResponseType } from "discord-interactions";
 import { VerifyDiscordRequest, getRandomEmoji } from "./src/discord/utils.js";
 
