@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
 
 
+
 app.get("/health", async (req, res) => {
   return res.send('Okay!')
 })
