@@ -12,21 +12,6 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
 
 
-import { capitalize, InstallGlobalCommands } from './src/discord/utils.js';
-
-
-// Simple test command
-const TEST_COMMAND = {
-  name: 'test',
-  description: 'Basic command',
-  type: 1,
-};
-
-
-const ALL_COMMANDS = [TEST_COMMAND];
-
-InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
-
 
 
 app.get("/health", async (req, res) => {
