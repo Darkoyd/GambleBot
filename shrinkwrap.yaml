@@ -1,10 +1,12 @@
 dependencies:
+  body-parser: 1.20.2
   discord-interactions: 3.4.0
   dotenv: 16.3.1
   express: 4.18.2
+  node-cmd: 5.0.0
   node-fetch: 3.3.2
 devDependencies:
-  eslint: 8.55.0
+  eslint: 8.56.0
   nodemon: 3.0.2
 packages:
   /@aashutoshrathi/word-wrap/1.2.6:
@@ -45,12 +47,12 @@ packages:
       node: ^12.22.0 || ^14.17.0 || >=16.0.0
     resolution:
       integrity: sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==
-  /@eslint/js/8.55.0:
+  /@eslint/js/8.56.0:
     dev: true
     engines:
       node: ^12.22.0 || ^14.17.0 || >=16.0.0
     resolution:
-      integrity: sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
+      integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
   /@humanwhocodes/config-array/0.11.13:
     dependencies:
       '@humanwhocodes/object-schema': 2.0.1
@@ -198,6 +200,26 @@ packages:
       npm: 1.2.8000 || >= 1.4.16
     resolution:
       integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==
+  /body-parser/1.20.2:
+    dependencies:
+      bytes: 3.1.2
+      content-type: 1.0.5
+      debug: 2.6.9
+      depd: 2.0.0
+      destroy: 1.2.0
+      http-errors: 2.0.0
+      iconv-lite: 0.4.24
+      on-finished: 2.4.1
+      qs: 6.11.0
+      raw-body: 2.5.2
+      type-is: 1.6.18
+      unpipe: 1.0.0
+    dev: false
+    engines:
+      node: '>= 0.8'
+      npm: 1.2.8000 || >= 1.4.16
+    resolution:
+      integrity: sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==
   /brace-expansion/1.1.11:
     dependencies:
       balanced-match: 1.0.2
@@ -412,12 +434,12 @@ packages:
       node: ^12.22.0 || ^14.17.0 || >=16.0.0
     resolution:
       integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
-  /eslint/8.55.0:
+  /eslint/8.56.0:
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0
       '@eslint-community/regexpp': 4.10.0
       '@eslint/eslintrc': 2.1.4
-      '@eslint/js': 8.55.0
+      '@eslint/js': 8.56.0
       '@humanwhocodes/config-array': 0.11.13
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
@@ -457,7 +479,7 @@ packages:
       node: ^12.22.0 || ^14.17.0 || >=16.0.0
     hasBin: true
     resolution:
-      integrity: sha512-iyUUAM0PCKj5QpwGfmCAG9XXbZCWsqP/eWAWrG/W0umvjuLRBECwSFdt+rCntju0xEH7teIABPwXpahftIaTdA==
+      integrity: sha512-Go19xM6T9puCOWntie1/P997aXxFsOi37JIHRWI514Hc6ZnaHGKY9xFhrU65RT6CcBEzZoGG1e6Nq+DT04ZtZQ==
   /espree/9.6.1:
     dependencies:
       acorn: 8.11.2
@@ -967,6 +989,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+  /node-cmd/5.0.0:
+    dev: false
+    engines:
+      node: '>=6.4.0'
+    resolution:
+      integrity: sha512-4sQTJmsS5uZKAPz/Df9fnIbmvOySfGdW+UreH4X5NcAOOpKjaE+K5wf4ehNBbZVPo0vQ36RkRnhhsXXJAT+Syw==
   /node-domexception/1.0.0:
     dev: false
     engines:
@@ -1157,6 +1185,17 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-qqJBtEyVgS0ZmPGdCFPWJ3FreoqvG4MVQln/kCgF7Olq95IbOp0/BWyMwbdtn4VTvkM8Y7khCQ2Xgk/tcrCXig==
+  /raw-body/2.5.2:
+    dependencies:
+      bytes: 3.1.2
+      http-errors: 2.0.0
+      iconv-lite: 0.4.24
+      unpipe: 1.0.0
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==
   /readdirp/3.6.0:
     dependencies:
       picomatch: 2.3.1
@@ -1433,9 +1472,11 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  body-parser: ^1.20.2
   discord-interactions: ^3.4.0
   dotenv: ^16.3.1
   eslint: ^8.55.0
   express: ^4.18.2
+  node-cmd: ^5.0.0
   node-fetch: ^3.3.2
   nodemon: ^3.0.2
