@@ -12,7 +12,7 @@ import router from './src/discord/bot.js'
 const app = express();
 
 
-//app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
+app.use('/discord', express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
@@ -45,7 +45,7 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.use('/', router)
+app.use('/discord', router)
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
