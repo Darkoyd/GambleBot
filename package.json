@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "register": "node src/discord/commands.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "discord-interactions": "^3.4.0",
