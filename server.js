@@ -12,7 +12,7 @@ import router from './src/discord/bot.js'
 const app = express();
 
 
-app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
+//app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
